@@ -43,34 +43,40 @@ fim-variáveis
 
 início
 
-imprima ("Bem vimdo a sherek, a aventura BLABLABLA, escolha y ou n");
+imprima ("Você,Shrek,foi traído e teve que voltar para o pântano");
+imprima ("De sua casa você ouve um barulho estranho e decide entrar");
+imprima ("Em frente a sua casa há uma lanterna(1) e uma faca(2)");
+imprima ("Decida qual dos dois tomar");
 select :=leia();
 
-enquanto (select<>"y" e select<>"n") faça
+enquanto (select<>"1" e select<>"2") faça
 
-imprima("Digite y ou n: ");
+imprima("Digite 1 ou 2: ");
 select :=leia();
 
 fim-enquanto
 
-se (select="y") então
+se (select="1") então
 
-imprima("Escolha de objeto certa, y ou n");
+imprima("A casa está escura, você prontamente liga sua lanterna e encontra seu querido amigo,burro.");
+imprima("Você vai em direção ao burro, ele lhe sugere sair para passear, você começa a pensar se vai(1) ou não(2).");
 select2 :=leia();
 
-se (select2="y") então
-imprima("Escolha da ação certa");
-fim-se
-
-se (select2="n") então
-imprima("Escolha da ação errada");
-fim-se
+se (select2="1") então
 
 fim-se
 
-se (select="n") então
+se (select2="2") então
 
-imprima("Escolha de objeto errada");
+fim-se
+
+fim-se
+
+se (select="2") então
+
+imprima("A casa está escura, você ouve um barulho de algo se aproximando e ataca com sua faca.");
+imprima("Descobrindo tarde demais que era seu amigo, burro!");
+imprima("Você entra em desespero e infarta ali mesmo. | DERROTA |");
 
 fim-se
 
