@@ -118,28 +118,26 @@ na terceira fase ser implementado em Linguagem de Programação \texttt{C}.
 % adicionar aqui o fluxograma
 
 \begin{tikzpicture}
-    % colocar nodos
-    \node (inicio) [startend] {Inicio};
-    \node (txta) [print, below of=inicio] {Texto A};
-    \node (inp1) [input, below of=txta] {objeto};
-    \node (tot1) [process, below of=inp1] {total $\leftarrow$ objeto + 1};
-    \node (maior) [decision, below of=tot1] {total $>$ M};
-    \node (sim) [print, right of=maior, node distance=4cm] {Total estourou};
-    \node (nao) [print, below of=maior, node distance=2.4cm] {Total ok};
-    \node (fim) [startend, below of=nao] {Fim};
-    % \node (vazio1) [empty, right of=fim, node distance=4cm] {};
-    % Desenhar as setas
-    \path [line] (inicio) -- (txta);
-    \path [line] (txta) -- (inp1);
-    \path [line] (inp1) -- (tot1);
-    \path [line] (tot1) -- (maior);
-    \path [line] (maior) -- (sim);
-    \path [line] (sim) -- (vazio1) -- (fim);
-    \path [line] (maior) -- (nao);
-    \path [line] (nao) -- (fim);
+    % primeira parte do fluxogrma
+    \node (inicio) [startend] {Início};
+    \node (txta) [print, below of=inicio, node distance=2cm] {Shrek The Adventure};
+    \node (dec1) [decision, below of=txta, node distance=3cm] {decisão $=$ 1};
+    \node (encerrando1) [print, right of=dec1, node distance=4.cm] {encerrando...};
+    \node (menu) [process, below of=dec1, node distance=3cm] {Menu de Opções};
+    \node (dec2) [decision, below of=menu, node distance=3.5cm] {decisão $=$ 1, 2 ou 3};
+    \node (txtenc) [print, left of=dec2, node distance=4.5cm] {Encerrando...};
+    \node (txtinfo) [print, right of=dec2, node distance=4.5cm] { Devs info};
+    \node (txt1) [print, below of=dec2, node distance=3.5cm] {texto};
+    \node (obj) [input, below of=txt1, node distance=2.5cm] {Lanterna};
+    \node (dec3) [decision, below of=obj, node distance=3cm] {decisão $=$ 1};
+    \node (txtmorte) [print, right of=dec3, node distance=4cm] {Morreu}
+    \node (fimfinal) [startend, below of=txtmorte, node distance=2cm] {Fim};
+    \node (1inicio) [startend, below of=dec3, node distance=3cm] {pt2};
+
+% \node (vazio1) [empty, right of=fim, node distance=4cm] {};
+% Desenhar as setas
+
 \end{tikzpicture}
-
-
 
 \clearpage % inicia próxima seção em nova página
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
