@@ -70,6 +70,11 @@ imprima("Você é morto. | DERROTA |");
 fim-se
 
 se (select2="2") então
+imprima("Você diz não, então os dois decidem relaxar e conversar em casa");
+imprima("Derrepente uma ogra encantada chamada Lorena bate na porta");
+imprima("Encontra você e voce se apaixona");
+imprima("Vocês se casam | VITÓRIA |");
+imprima("Parabens, você ganhou!!");
 
 fim-se
 
