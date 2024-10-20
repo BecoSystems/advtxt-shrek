@@ -134,11 +134,9 @@ void jogo2()
                 printf("Opção inválida, digite 1 ou 2 :");
                 scanf(" %c", &select);
                 if(select != '1' || select != '2')
-                {
                     jogo2();
-                }
             }
             break;
     }
-return;
+    return;
 }
