@@ -52,6 +52,37 @@ do{
     }
     }while(select !='2');
 
+}
+//Função do menu.
+//
+void menu()
+{
+    char select;
+    do{
+    printf("\n\n|MENU|\n\nSelecione (1) para jogar\nSelecione (2) para fechar o menu\nSelecione (3) para informações relativas aos desenvolvedores\nOpção selecionada : ");
+    scanf(" %c",&select);
+    switch(select)
+    {
+        case '1':
+            jogo();
+            break;
+            case '2':
+            printf("Fechando menu ...");
+            break;
+        case '3':
+            printf("\n|Devs:                      |\n|Gilmar Lopes - 18 anos     |\n|Vinicius Medeiros - 19 anos|\n|Luis Guilherme - 18 anos   |");
+            break;
+        default :
+            while (select!='1'&&select!='2'&&select!='3')
+            {
+                printf("Opção inválida, digite 1, 2 ou 3 :");
+                scanf(" %c",&select);
+            }
+            break;
+    }
+    }while(select!='2');
+    return;
+}
 /* Write your functions here... */
 
 /* ------------------------------------------------------------------------- */
