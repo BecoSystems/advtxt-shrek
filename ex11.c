@@ -83,6 +83,37 @@ void menu()
     }while(select!='2');
     return;
 }
+void jogo()
+{
+    char select;
+    printf("\n\nVocê, Shrek, foi traído e teve que voltar para o pântano\nDe sua casa você ouve um barulho estranho e decide entrar\nEm sua frente há uma lanterna(1) e uma faca(2)\nDecida qual dos dois tomar :");
+    //Escolha primeira,objeto.
+    scanf(" %c",&select);
+    switch(select)
+    {
+        case '1':
+            printf("\nA casa está escura, você prontamente liga sua lanterna e encontra seu querido amigo, burro.\n");
+            jogo2();
+            break;
+        case '2':
+            printf("\nA casa está escura, você ouve um barulho de algo se aproximando e ataca com sua faca\nDescobrindo tarde demais que era seu amigo, burro!\nVocê entra em desespero e infarta alí mesmo\n\n|DERROTA|\n\n");
+            break;
+            default:
+            while(select!='1'&&select!='2')
+            {
+                printf("Opção inválida, digite 1 ou 2 :");
+                scanf(" %c",&select);
+            if(select!='1'||select!='2')
+            {
+                jogo();
+            }
+            }
+            break;
+            }
+    return;
+}
+}
+
 /* Write your functions here... */
 
 /* ------------------------------------------------------------------------- */
