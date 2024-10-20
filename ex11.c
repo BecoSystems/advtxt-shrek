@@ -48,6 +48,10 @@ int main()
                 {
                     printf("Opção inválida, digite 1 ou 2 :");
                     scanf(" %c", &select);
+                    if (select == '2')
+                    {
+                        printf("Encerrando ...");
+                    }
                 }
                 break;
         }
