@@ -63,6 +63,9 @@ imprima("Você vai em direção ao burro, ele lhe sugere sair para passear, voc�
 select2 :=leia();
 
 se (select2="1") então
+imprima("No meio do seu lindo passeio, um grupo de caçadores os veem");
+imprima("Vocêse prepara, mas leva uma bofetada da Fiona que estava entre eles, irritada com o divórcio");
+imprima("Você é morto. | DERROTA |");
 
 fim-se
 
