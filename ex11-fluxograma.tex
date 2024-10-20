@@ -103,14 +103,13 @@ o programa será implementado na Linguagem de Programação \texttt{C}
 \section{Introdução}
 
 % Descrever melhor seu projeto aqui
+O programa é dividido em 4 funções, sendo elas a \textbf{main}, a \textbf{void menu}, \textbf{void jogo} e \textbf{void jogo 2}. A função principal possui uma estrutura de escolha, sendo ela (1), chama a função menu,(2) encerrar o programa, e uma medida de segurança que rejeita outras possibilidades de digitação do usuário através de um looping, a função main em si possui também um looping através do "do while" que nos permite \textbf{retornar a função através do menu}. O menu também é montado em forma de loop com "do while" ele no entanto tem três opções,1, 2 e 3.
 
-Este programa faz isso, isso e \texttt{também em fonte mono-espaçada faz isso}.
+A opção chama a função jogo, a 2 fecha o menu e retorna para a main, a 3 mostra informações relativas aos desenvolvedores e depois retorna a main. Há também uma mesma estrutura de segurança através do while que impede erro por digitação de chat errado, inclusive, em todas as funções há uma variável carácter que vá ser usada para aplicar o "switch". Ao selecionar a 2 o menu é \textbf{encerrado} e voltamos para main, se 3, os nomes dos desenvolvedores aparece e voltamos para o menu, se 1 iniciarmos a função jogo. Função jogo é composta da mesma estrutura de seleção que as outras, \textbf{uma variável seletora}, um texto que entra em contato com o usuário e lhe oferece as opções, nesse caso 2, referentes a escolha de um objeto, se for a opção correta o usuário vai para a parte 2 ou seja, a função jogo 2 é chamada, se errado imprime uma frase de derrota e voltamos para o menu. Jogo 2, novamente 2 escolhas, dessa vez referente a ação, se correta o usuário recebe o bom final e a frase de vitória e voltamos para o menu, se errado, um final ruim, frase de derrota e voltamos pra o menu.
 
 O programa será modelado em \textit{fluxograma} em uma primeira fase, em seguida
 sua lógica será desenvolvida em formato de \textit{algoritmo}, para então
 na terceira fase ser implementado em Linguagem de Programação \texttt{C}.
-
-Exemplo de letra em \textit{itálico é com textit}, e em \textbf{bold face é com textbf} e \texttt{tal tal tal é mono-espaçada type-writer}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % seção de objetivos %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
