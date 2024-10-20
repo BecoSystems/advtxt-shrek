@@ -152,6 +152,46 @@ na terceira fase ser implementado em Linguagem de Programação \texttt{C}.
 
 \end{tikzpicture}
 
+\newpage % Inicia segunda pagina do fluxograma
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Continuação}
+
+\tikzstyle{line} = [draw, -latex']
+\tikzstyle{startend} = [draw, ellipse,fill=red!20, minimum height=2em, node distance=1.55cm]
+\tikzstyle{print} = [tape, fill=blue!20, draw, draw=black, minimum width=3cm, minimum height=1.4cm, text width=4.5em, text centered, tape bend top=none, tape bend height=0.2cm, node distance=1.55cm]
+\tikzstyle{input} = [trapezium, trapezium left angle=60, trapezium right angle=90, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=blue!30, node distance=1.95cm]
+\tikzstyle{process} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=orange!30, node distance=1.55cm]
+
+\tikzstyle{block} = [rectangle, draw, fill=blue!20, text width=5em, text centered, rounded corners, minimum height=4em, node distance=1.55cm]
+\tikzstyle{decisionb} = [diamond, draw, fill=blue!20, text width=4.5em, text badly centered, inner sep=0pt, node distance=1.55cm]
+\tikzstyle{decision} = [diamond, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=green!30, node distance=2.25cm]
+\tikzstyle{empty} = [circle, fill=white, minimum width=0.01mm, node distance=2.55cm]
+
+\begin{tikzpicture}
+    % segunda parte do fluxogrma
+    \node (ini1) [startend] {pt2};
+    \node (txtdois) [print, below of=ini1, node distance=2cm] {Passear};
+    \node (decdois) [decision, below of=txtdois, node distance=3cm] {decisão $=$ 2};
+    \node (txtmortedois) [print, right of=decdois, node distance=4cm] {Morreu};
+    \node (fimfinaldois) [startend, below of=txtmortedois, node distance=2cm] {Fim};
+    \node (textofinal) [print, below of=decdois, node distance=3cm] {Você Venceu!};
+    \node (ff) [startend, below of=textofinal, node distance=2cm] {Fim};
+
+    % \node (vazio1) [empty, right of=fim, node distance=4cm] {};
+    % Desenhar as setas da segunda parte
+
+    \path [line] (ini1) -- (txtdois);
+    \path [line] (txtdois) -- (decdois);
+    \path [line] (decdois.east) -- node[anchor=north] {Não} (txtmortedois.west);
+    \path [line] (decdois) -- node[anchor=east] {Sim} (textofinal);
+    \path [line] (txtmortedois) -- (fimfinaldois);
+    \path [line] (txtmortedois) -- (fimfinaldois);
+    \path [line] (textofinal) -- (ff);
+
+
+
+\end{tikzpicture}
+
 \clearpage % inicia próxima seção em nova página
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % seção de justificativa %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
