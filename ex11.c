@@ -31,26 +31,28 @@ int main()
     char select;
 //Primeiro  loop.
 //
-do{
-        printf("\n\n|SHREK|\n\n|THE ADVENTURE|\n\nSelecione 1 para abrir o menu e 2 para fechar :");
-        scanf(" %c",&select);
-    switch(select)
+    do
     {
-        case '1':
-            menu();
-            break;
-        case '2':
-            printf("Encerrando ...");
-            break;
-        default :
-            while(select!='1'&&select!='2')
-            {
-                printf("Opção inválida, digite 1 ou 2 :");
-                scanf(" %c",&select);
-            }
-            break;
+        printf("\n\n|SHREK|\n\n|THE ADVENTURE|\n\nSelecione 1 para abrir o menu e 2 para fechar :");
+        scanf(" %c", &select);
+        switch(select)
+        {
+            case '1':
+                menu();
+                break;
+            case '2':
+                printf("Encerrando ...");
+                break;
+            default :
+                while(select != '1' && select != '2')
+                {
+                    printf("Opção inválida, digite 1 ou 2 :");
+                    scanf(" %c", &select);
+                }
+                break;
+        }
     }
-    }while(select !='2');
+    while(select != '2');
 
 }
 //Função do menu.
@@ -58,29 +60,31 @@ do{
 void menu()
 {
     char select;
-    do{
-    printf("\n\n|MENU|\n\nSelecione (1) para jogar\nSelecione (2) para fechar o menu\nSelecione (3) para informações relativas aos desenvolvedores\nOpção selecionada : ");
-    scanf(" %c",&select);
-    switch(select)
+    do
     {
-        case '1':
-            jogo();
-            break;
+        printf("\n\n|MENU|\n\nSelecione (1) para jogar\nSelecione (2) para fechar o menu\nSelecione (3) para informações relativas aos desenvolvedores\nOpção selecionada : ");
+        scanf(" %c", &select);
+        switch(select)
+        {
+            case '1':
+                jogo();
+                break;
             case '2':
-            printf("Fechando menu ...");
-            break;
-        case '3':
-            printf("\n|Devs:                      |\n|Gilmar Lopes - 18 anos     |\n|Vinicius Medeiros - 19 anos|\n|Luis Guilherme - 18 anos   |");
-            break;
-        default :
-            while (select!='1'&&select!='2'&&select!='3')
-            {
-                printf("Opção inválida, digite 1, 2 ou 3 :");
-                scanf(" %c",&select);
-            }
-            break;
+                printf("Fechando menu ...");
+                break;
+            case '3':
+                printf("\n|Devs:                      |\n|Gilmar Lopes - 18 anos     |\n|Vinicius Medeiros - 19 anos|\n|Luis Guilherme - 18 anos   |");
+                break;
+            default :
+                while(select != '1' && select != '2' && select != '3')
+                {
+                    printf("Opção inválida, digite 1, 2 ou 3 :");
+                    scanf(" %c", &select);
+                }
+                break;
+        }
     }
-    }while(select!='2');
+    while(select != '2');
     return;
 }
 void jogo()
@@ -88,7 +92,7 @@ void jogo()
     char select;
     printf("\n\nVocê, Shrek, foi traído e teve que voltar para o pântano\nDe sua casa você ouve um barulho estranho e decide entrar\nEm sua frente há uma lanterna(1) e uma faca(2)\nDecida qual dos dois tomar :");
     //Escolha primeira,objeto.
-    scanf(" %c",&select);
+    scanf(" %c", &select);
     switch(select)
     {
         case '1':
@@ -98,88 +102,43 @@ void jogo()
         case '2':
             printf("\nA casa está escura, você ouve um barulho de algo se aproximando e ataca com sua faca\nDescobrindo tarde demais que era seu amigo, burro!\nVocê entra em desespero e infarta alí mesmo\n\n|DERROTA|\n\n");
             break;
-            default:
-            while(select!='1'&&select!='2')
+        default:
+            while(select != '1' && select != '2')
             {
                 printf("Opção inválida, digite 1 ou 2 :");
-                scanf(" %c",&select);
-            if(select!='1'||select!='2')
-            {
-                jogo();
-            }
+                scanf(" %c", &select);
+                if(select != '1' || select != '2')
+                    jogo();
             }
             break;
-            }
+    }
     return;
 }
+
+void jogo2()
+{
+    char select;
+    printf("Você vai em direção ao burro, ele lhe sugere sair para passear, você começa a pensar se vai(1) ou não(2)\nOpção desejada: ");
+    scanf(" %c", &select);
+    switch(select)
+    {
+        case '1':
+            printf("\nNo meio do seu lindo passeio, um grupo de caçadores os veem\nVocê se prepara, mas leva uma bofetada da Fiona que estava entre eles, irritada com o divórcio\nVocê é morto\n\n|DERROTA|\n\n");
+            break;
+        case '2' :
+            printf("\nVocê diz não, então os dois decidem relaxar e conversar em casa\nDerrepente uma ogra encantada chamada Lorena bate na porta\nencontra você e se apaixona\nvocês se casam\n\n|VITÓRIA|\n\nParabéns você ganhou\n");
+            break;
+        default:
+            while(select != '1' && select != '2')
+            {
+                printf("Opção inválida, digite 1 ou 2 :");
+                scanf(" %c", &select);
+                if(select != '1' || select != '2')
+                {
+                    jogo2();
+                }
+            }
+            break;
+    }
+return;
 }
-
-/* Write your functions here... */
-
-/* ------------------------------------------------------------------------- */
-/**
- * @ingroup GroupUnique
- * @brief Prints help information and exit
- * @details Prints help information (usually called by opt -h)
- * @return Void
- * @author Ruben Carlo Benante
- * @version 20160908.182830
- * @date 2016-09-08
- *
- */
-
-/* ------------------------------------------------------------------------- */
-/**
- * @ingroup GroupUnique
- * @brief Prints version and copyright information and exit
- * @details Prints version and copyright information (usually called by opt -V)
- * @return Void
- * @author Ruben Carlo Benante
- * @version 20160908.182830
- * @date 2016-09-08
- *
- */
-/**
- * @ingroup GroupUnique
- * @brief This function initializes some operations before start
- * @details Details to be written in
- * multiple lines
- *
- * @pre You need to call foo() before calling this function
- *
- * @param[in] i Input parameter that does bla
- * @param[out] o Parameter that outputs ble
- * @param[in,out] z The @a z variable is used as input and output
- *
- * @retval 0 Returned when bli
- * @retval 1 Error code: function returned blo
- *
- * @par Example
- * @code
- *    if(x == funcexample(i, o, z))
- *       printf("And that is it\n");
- * @endcode
- *
- * @return Void
- *
- * @warning Be carefull with blu
- * @todo Need to implement it. Its empty now. This doxygen tags are overwhelming.
- * Mandatory tags are: ingroup, brief, details, param, return, author and date.
- * The others are optional.
- *
- * @deprecated This function will be deactivated in version +11
- * @see help()
- * @see copyr()
- * @bug There is a bug with x greater than y
- * @note You can read more about it at <<a href="http://www.beco.cc">www.beco.cc</a>>
- *
- * @author Ruben Carlo Benante
- * @version 20160908.182830
- * @date 2016-09-08
- * @copyright Use this tag only if not the same as the whole file
- *
-
-/* ------------------------------------------------------------------------- */
-/* vi: set ai et ts=4 sw=4 tw=0 wm=0 fo=croql : C config for Vim modeline    */
-/* Template by Dr. Beco <rcb at beco dot cc>       Version 20180716.101436   */
-

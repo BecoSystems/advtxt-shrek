@@ -136,6 +136,19 @@ na terceira fase ser implementado em Linguagem de Programação \texttt{C}.
 
 % \node (vazio1) [empty, right of=fim, node distance=4cm] {};
 % Desenhar as setas
+    \path [line] (inicio) -- (txta);
+    \path [line] (txta) -- (dec1);
+    \path [line] (dec1) -- node[anchor=east] {Sim} (menu);
+    \path [line] (dec1.east) -- node[anchor=east] {Não} (encerrando1);
+    \path [line] (menu) -- (dec2);
+    \path [line] (dec2) -- node[anchor=east] {2} (txtenc);
+    \path [line] (dec2) -- node[anchor=west] {3} (txtinfo);
+    \path [line] (dec2) -- node[anchor=east] {1} (txt1);
+    \path [line] (txt1) -- (obj);
+    \path [line] (obj) -- (dec3);
+    \path [line] (dec3.east) -- node[anchor=north] {Não} (txtmorte.west);
+    \path [line] (dec3) -- node[anchor=east] {Sim} (1inicio);
+    \path [line] (txtmorte) -- (fimfinal);
 
 \end{tikzpicture}
 
